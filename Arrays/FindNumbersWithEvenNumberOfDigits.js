@@ -23,5 +23,24 @@
  * @return {number}
  */
 var findNumbers = function(nums) {
-    
+    console.log(nums);
+    let count = 0;
+    for (item in nums) {
+        // console.log(nums[item].toString().length);
+        if(nums[item].toString().length % 2 === 0) {
+            count++
+        }
+    }
+    console.log(count)
+    return count;
 };
+
+nums1 = [12,345,2,6,7896]
+// Output: 2
+
+nums2 = [555,901,482,1771]
+// Output: 1 
+
+console.log(findNumbers(nums1));
+
+console.log(findNumbers(nums2));
