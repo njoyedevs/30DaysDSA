@@ -14,7 +14,6 @@
 // Only 1771 contains an even number of digits.
 
 // Constraints:
-
 // 1 <= nums.length <= 500
 // 1 <= nums[i] <= 105
 
