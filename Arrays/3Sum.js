@@ -26,17 +26,47 @@
  * @param {number[]} nums
  * @return {number[][]}
  */
-var threeSum = function (nums) {
+var threeSum1 = function (nums) {
+
+    console.log(nums);
+    nums.sort((a,b) => a - b);
+    console.log(nums);
+
+    results = [];
+
+    for (let leftIdx = 0; leftIdx < nums.length - 2; leftIdx++) {
+        if (leftIdx > 0 && nums[leftIdx] === nums[leftIdx - 1]) continue; // Skip the same leftIdx
+        let runner1Idx = leftIdx + 1;
+        let runner2Idx = nums.length - 1;
+        while (runner1Idx < runner2Idx) {
+            let sum = nums[leftIdx] + nums[runner1Idx] + nums[runner2Idx];
+            if (sum === 0) {
+                results.push([nums[leftIdx], nums[runner1Idx], nums[runner2Idx]]);
+                while (nums[runner1Idx] === nums[runner1Idx + 1]) runner1Idx++; // Skip the same runner1Idx
+                while (nums[runner2Idx] === nums[runner2Idx - 1]) runner2Idx--; // Skip the same runner2Idx
+                runner1Idx++;
+                runner2Idx--;
+            } else if (sum < 0) {
+                runner1Idx++;
+            } else {
+                runner2Idx--;
+            }
+        }
+    }
+
+    return results;
+
+};
+
+var threeSum2 = function (nums) {
+
     let res = [];
     nums.sort((a, b) => a - b);
-    
     for (let i = 0; i < nums.length - 2; i++) {
         // skip the same element to avoid duplicate triplets
         if (i != 0 && nums[i] == nums[i - 1]) continue;
-        
         let j = i + 1; // low pointer
         let k = nums.length - 1; // high pointer
-
         while (j < k) {
             let sum = nums[i] + nums[j] + nums[k];
             if (sum == 0) {
@@ -53,7 +83,6 @@ var threeSum = function (nums) {
             }
         }
     }
-    
     return res;
 };
 
@@ -66,8 +95,9 @@ nums2 = [0,1,1]
 nums3 = [0,0,0]
 Output: [[0,0,0]]
 
-console.log(threeSum(nums1));
-
-console.log(threeSum(nums2));
-
-console.log(threeSum(nums3));
+console.log(threeSum1(nums1));
+console.log(threeSum2(nums1));
+console.log(threeSum1(nums2));
+console.log(threeSum2(nums2));
+console.log(threeSum1(nums3));
+console.log(threeSum2(nums3));
