@@ -1,5 +1,17 @@
 # Specific Operations Data Structure by Optimizations, Language Specifics, Time/Space Complexity, Real-world Examples, Pros/Cons, Memory Allocation
 
+## Data Structures Included:
+1. Array
+2. Linked List
+3. Stack
+4. Queue
+5. Hash Table
+6. Binary Tree
+7. Graph
+8. Heap
+9. Trie
+10. Linked Hash Map
+
 ## Array
 
 1. Optimization: 
