@@ -1,0 +1,1 @@
+![Data Structure Table Part 1](DSTable1.jpg)
