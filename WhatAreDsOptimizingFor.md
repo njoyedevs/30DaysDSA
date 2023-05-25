@@ -1,4 +1,4 @@
-# Specific Operations Data Structure by Optimizations, Language Specifics, Time/Space Complexity, Real-world Examples, Pros/Cons, Memory Allocation
+# Data Structure by Optimizations, Language Specifics, Time/Space Complexity, Real-world Examples, Pros/Cons, Memory Allocation
 
 ## Data Structures Included:
 1. Array
